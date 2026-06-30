@@ -1,4 +1,4 @@
-1、主函数
+ 1、主函数
 all_msg=a_msg;                       %所有可能的信号
 all_msg_gf=gf(all_msg,3);          %将所有的信号映射到GF域
 all_code_msg=rs_rscode(all_msg_gf) ; %对所有的信号进行RS编码，得到所有正确的编码
@@ -16,7 +16,7 @@ NOISE=gf(noise,3);                 %产生噪声信号
 in_msg=code+NOISE                   %加噪 
  
 for ii = 1:5                         %对5组信号进行译码
-    new_msg(ii,:) = rs_rrscode(in_msg(ii,:),all_code_msg,all_msg);
+     new_msg(ii,:) = rs_rrscode(in_msg(ii,:),all_code_msg,all_msg);
 end
 new_msg%译码输出
 num_same = same(msg,new_msg);     %译码正确个数
